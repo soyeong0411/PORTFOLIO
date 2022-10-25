@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* font */
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a{
+    font-family: 'InfinitySans-RegularA1',sans-serif;
+}
+
+body{
+    background: #fcf9ee;
+}
+
+
+/* header */
+.headerWrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+    height: 100%;
+    padding: 30px 60px; 
+}
+.headerWrap>h1 img{width: 100%;}
+.headerWrap>h1{
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-right: 0;
+    margin-left: 0;
+    width: 245px;
+}
+.menuWrap>ul,.iconMenu>ul{
+    display: flex;
+    align-items: center;
+}
+.menuWrap>ul{
+    position: relative; 
+} /* submenu position 값 */
+.menuWrap>ul>li>a,.iconMenu>ul>li>a{
+    display: flex;justify-content: center;
+    align-items: center;height: 100%;
+    padding: 10px 20px;
+    font-size: 19px;
+}
+.searchBar{
+    position: relative;
+    margin-right: 5px;
+}
+.inp{
+    width: 230px;height: 30px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    text-indent: 10px;
+}
+.inp:focus{
+    outline:none
+}
+.iconMenu .s_icon{
+    width: 18px;
+    position: absolute;
+    right: 10px;top: 5px;
+}
+.iconMenu img{
+    width: 26px;
+}
+.iconMenu>ul>li>a{
+    padding: 10px;
+}
+
+/* submenu */
+.subMenuBg{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+}
+.subMenuBg::after{
+    content: "";
+    width: 100%;height: 250px;
+    background: #fcf9ee;
+    position: absolute;
+}
+.menuWrap .submenu{
+    display: flex;
+    position: absolute; /* mainmenu width값 그대로 적용 */
+    padding: 70px 0 0 0;
+    z-index: 1;
+    width: 100%;
+    gap:15px
+}
+.submenu{
+    display: flex;
+}
+.submenu>li{
+    margin-right: 30px;
+}
+.submenu img{
+    width: 250px;
+}
+
+
+
+
+
+/* .menuWrap .submenu li a{
+    display: block;line-height: 40px;
+    font-size: 14px;color: #fff;
+    text-align: center;} */
+
+    .m_toggle{display: none;}
