@@ -1,12 +1,18 @@
 //menu
-$(".subMenuBg").hide();
+$(".subMenuBg,.submenu").hide();
 $(".menuWrap>ul>li").hover(function(){
-    $(this).children(".submenu").stop().slideDown(400);
+    $(this).children(".submenu").stop().fadeIn(400);
     $(".subMenuBg::after").stop().slideDown();
     $(".subMenuBg").show();
 },function(){
     $(".subMenuBg,.menuWrap .submenu").stop().hide();
 })
+
+//m_menu
+$(".m")
+
+
+
 
 //swiper-slide
 var swiper = new Swiper(".mainSlide", {
@@ -44,6 +50,4 @@ $('.slick-slider').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     dots : true,
-    // prevArrow : "<button type='button' class='slick-prev'>Previous</button>",		// 이전 화살표 모양 설정
-	// nextArrow : "<button type='button' class='slick-next'>Next</button>",		// 다음 화살표 모양 설정
   });
